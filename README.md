@@ -7,38 +7,37 @@ Features
 
 Create matrices of custom dimensions
 Support for basic matrix operations:
-  Addition
-  Subtraction
-  Multiplication
-  Division (matrix inverse)
-
+* Addition
+* Subtraction
+* Multiplication
+* Division (matrix inverse)
 
 Real-time validation of operations based on matrix dimensions
-Clean and intuitive UI built with Jetpack Compose
-Efficient calculations using native code
+* Clean and intuitive UI built with Jetpack Compose
+* Efficient calculations using native code
 
 ### Technical Architecture
 The application follows a Model-View-ViewModel (MVVM) architecture:
-  UI Layer: Implemented using Jetpack Compose with composable functions for different UI components
-  ViewModel: Manages UI state and business logic
-  Native Layer: Handles complex matrix operations in C/C++ for optimal performance
+* UI Layer: Implemented using Jetpack Compose with composable functions for different UI components
+* ViewModel: Manages UI state and business logic
+* Native Layer: Handles complex matrix operations in C/C++ for optimal performance
 
 ### Implementation Details
 #### UI Components
-  MatrixCalculatorApp: Main composable that orchestrates the entire UI
-  DimensionInputSection: Input fields for matrix dimensions
-  MatrixInputSection: Dynamic grid for entering matrix values
-  OperationSelection: Buttons for selecting matrix operations
-  MatrixResultSection: Display area for operation results
+* MatrixCalculatorApp: Main composable that orchestrates the entire UI
+* DimensionInputSection: Input fields for matrix dimensions
+* MatrixInputSection: Dynamic grid for entering matrix values
+* OperationSelection: Buttons for selecting matrix operations
+* MatrixResultSection: Display area for operation results
 
 #### Core Classes
-  MatrixViewModel: Manages application state and matrix operations
-  MatrixOperation: Enum for supported operations (ADD, SUBTRACT, MULTIPLY, DIVIDE)
+* MatrixViewModel: Manages application state and matrix operations
+* MatrixOperation: Enum for supported operations (ADD, SUBTRACT, MULTIPLY, DIVIDE)
 
 ### Native Integration
 The app uses JNI to interact with native C/C++ code for matrix operations:
-  System.loadLibrary("matrix_operations") loads the native library
-  Native functions for matrix operations are declared with the external keyword
+* System.loadLibrary("matrix_operations") loads the native library
+* Native functions for matrix operations are declared with the external keyword
 
 ### Requirements
 Android Studio Hedgehog (2023.1.1) or newer
@@ -56,10 +55,10 @@ Run the application on an emulator or physical device
 
 ### Native Code
 The application performs matrix operations in native code. The JNI interface includes:
-  addMatrices: Adds two matrices of the same dimensions
-  subtractMatrices: Subtracts one matrix from another
-  multiplyMatrices: Multiplies two matrices (A×B)
-  divideMatrices: Performs matrix division (A×B⁻¹)
+* addMatrices: Adds two matrices of the same dimensions
+* subtractMatrices: Subtracts one matrix from another
+* multiplyMatrices: Multiplies two matrices (A×B)
+* divideMatrices: Performs matrix division (A×B⁻¹)
 
 ### Future Enhancements
 Support for more matrix operations (determinant, transpose, etc.)
